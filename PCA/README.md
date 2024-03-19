@@ -8,6 +8,8 @@ dataA為後續的主要分析的資料，此範例設定為df/f的形式(任意�
 
 $$Cov(X)=\frac{1}{n-1} (X-\bar{X})^T (X-\bar{X})$$
 
+`covA = (meanA.' * meanA) / (size(meanA,1) - 1);`
+
 接著計算Eigenvalue & Eigenvector
 
 `[u,value]=eig(covA);`
