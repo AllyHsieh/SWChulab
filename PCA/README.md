@@ -24,4 +24,6 @@ $$Cov(X)=\frac{1}{n-1} (X-\bar{X})^T (X-\bar{X})$$
 
 `X=reshape(P,size(dataA,2),size(dataA,1),[]);`
 
+![First 5 components](images/pca1_5.png)
+
 
