@@ -1,0 +1,9 @@
+conda install pytorch==1.8.1 torchvision==0.9.1 torchaudio==0.8.1 cudatoolkit=11.1 -c pytorch -c nvidia
+pip install pyyaml
+pip install matplotlib
+pip install gdown
+pip install scikit-image
+set KMP_DUPLICATE_LIB_OK=TRUE  # Windows Command Prompt
+
+
+p.s. first cmd please do it with internet
