@@ -21,7 +21,8 @@ https://medium.com/geekculture/install-cuda-and-cudnn-on-windows-linux-52d1501a8
    $ conda create -n deepcadz python=3.6
    $ conda activate deepcadz
    ```
-      *Note:  `please install all cmd in env_create.txt*
+      *Note:  please install all cmd in env_create.txt*
+   
       *Note:  `pip install` command is required for Pytorch installation.*
   
 ### Demos
