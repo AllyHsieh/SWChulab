@@ -20,9 +20,8 @@ https://medium.com/geekculture/install-cuda-and-cudnn-on-windows-linux-52d1501a8
    ```
    $ conda create -n deepcadz python=3.6
    $ conda activate deepcadz
-   $ pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
    ```
-      
+      *Note:  `please install all cmd in env_create.txt*
       *Note:  `pip install` command is required for Pytorch installation.*
   
 ### Demos
