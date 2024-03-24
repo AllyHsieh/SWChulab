@@ -13,7 +13,7 @@
 
 - [Deconvolution and PSF](Deconvolution.md)
 
-The following is the formal website, you can find the detailed with link:
+The followings are the links for formal website, you can find the detailed with them:
 
 - [Cellpose](https://github.com/MouseLand/cellpose)
 
