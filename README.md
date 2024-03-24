@@ -15,13 +15,13 @@
 
 The followings are the links for formal website, you can find the detailed with them:
 
-- [Cellpose](https://github.com/MouseLand/cellpose)
+- [Cellpose](https://github.com/MouseLand/cellpose) : Circular cell segmentation (Detailed in CH 4.1.3)
 
-- [Ilastik](https://www.ilastik.org/)
+- [Ilastik](https://www.ilastik.org/) : Iregular shape segmentation (Detailed in CH 4.1.3)
 
-- [DeepCAD-RT](https://github.com/cabooster/DeepCAD-RT)
+- [DeepCAD-RT](https://github.com/cabooster/DeepCAD-RT) : Calcium Image Denoise Algorithm, training with Real Time information
 
-- [DeepVID](https://github.com/bu-cisl/DeepVID)
+- [DeepVID](https://github.com/bu-cisl/DeepVID) : Volatege Image Denoise Algorithm, model based on CNN
 
-- [T-test and ANOVA analysis](https://www.graphpad.com/quickcalcs/contMenu/)
+- [T-test and ANOVA analysis](https://www.graphpad.com/quickcalcs/contMenu/) : It's a uselful website for you to do the statics analysis
 
