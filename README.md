@@ -7,7 +7,7 @@
 
 - DeepCAD-Z
 
-- PCA 
+- [PCA](PCA.md) 
 
 - Moving average analysis for PSNR/PCC
 
