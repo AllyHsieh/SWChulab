@@ -11,11 +11,15 @@
 
 - Moving average analysis for PSNR/PCC
 
-- Cellpose website
+- [Deconvolution and PSF](Deconvolution.md)
 
-- Ilastik website
+- [Cellpose website](https://github.com/MouseLand/cellpose)
 
-- DeepCAD-RT website
+- [Ilastik website](https://www.ilastik.org/)
+
+- [DeepCAD-RT website](https://github.com/cabooster/DeepCAD-RT)
+
+- [DeepVID](https://github.com/bu-cisl/DeepVID)
 
 - T-test and ANOVA analysis website
 
