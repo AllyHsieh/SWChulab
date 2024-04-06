@@ -1,5 +1,5 @@
-load('C:\b07 YinTzu\碩士論文\figures\ch3\DOF\dof40.mat')
-voxelz=8;
+load('dof40.mat')
+voxelz=8; %um/px
 x=1:1:size(dof,1);
 intx=1:0.01:size(dof,1);
 for i=1:size(dof,2)
@@ -7,7 +7,7 @@ for i=1:size(dof,2)
     intl=interp1(x,l,intx,'linear');
     intlbox(i,:)=intl;
     [pks,locs] = findpeaks(intl);
-  h= sort(pks,'descend');
+    h= sort(pks,'descend');
 rightmax = find(intl==h(1));
 leftmax = find(intl==h(2));
 half_max=(intl(rightmax)-min(intl))/2;
@@ -50,9 +50,6 @@ fillplot(upper,lower,avg);axis tight;ticklabel(8/100);xlabel('distance(\mum)');t
 figure(12),subplot(223),plot(orirecord);axis tight;xlabel('roi');title(['DOF=',num2str(mean(orirecord)),'\mum;std=',num2str(std(orirecord))])
 
 function normA=normalize(A)
-%A_min = min(A, [], 2);
-%A_max = max(A, [], 2); 
-%normA = (A - A_min) ./ (A_max - A_min);
 normA=A./mean(A, 2);
 end
 function fillplot(upper,lower,avg)
