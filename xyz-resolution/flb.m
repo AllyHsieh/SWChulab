@@ -1,6 +1,5 @@
-flb=double(tiffreadVolume('C:\b07 YinTzu\碩士論文\figures\ch3\25xNA1.05_200nm_HWP308_PMT0.79_dt0.004_z0-0.5-10_2.tif'));
-flb=flb(:,:,:,1);
-%flbmask=double(tiffreadVolume('C:\b07 YinTzu\碩士論文\figures\ch3\flb.tiff'));
+flb=double(tiffreadVolume('25xNA1.05_200nm_HWP308_PMT0.79_dt0.004_z0-0.5-10_2.tif'));
+flb=flb(:,:,:,1); %R channel
 pick=329;error=0.195; %error range(px)
 voxelz=0.5; %um
 voxelxy=400/512/4; %um
