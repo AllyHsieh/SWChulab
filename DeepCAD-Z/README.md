@@ -53,7 +53,7 @@ python demo_test_pipeline.py
 
 **Param explanation**
 
-Neet to notice these block!!!
+Need to notice these block!!!
 
 ###### demo_train_pipeline.py
 
