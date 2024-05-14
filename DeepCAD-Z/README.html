@@ -34,7 +34,7 @@
 </head>
 
 <body>
-    <div id="doc" class="markdown-body container-fluid comment-inner comment-enabled" data-hard-breaks="true"><h1 id="DeepCAD-Z" data-id="DeepCAD-Z" style=""><a class="anchor hidden-xs" href="#DeepCAD-Z" title="DeepCAD-Z"><span class="octicon octicon-link"></span></a><span>DeepCAD-Z</span></h1><p><span>-NTHU DAIL version</span></p><h2 id="Pytorch-code" data-id="Pytorch-code" style=""><a class="anchor hidden-xs" href="#Pytorch-code" title="Pytorch-code"><span class="octicon octicon-link"></span></a><span>Pytorch code</span></h2><h3 id="Our-environment" data-id="Our-environment" style=""><a class="anchor hidden-xs" href="#Our-environment" title="Our-environment"><span class="octicon octicon-link"></span></a><span>Our environment</span></h3><ul>
+    <div id="doc" class="markdown-body container-fluid comment-inner comment-enabled" data-hard-breaks="true"><h1 id="TAG-SPARK" data-id="TAG-SPARK" style=""><a class="anchor hidden-xs" href="#TAG-SPARK" title="TAG-SPARK"><span class="octicon octicon-link"></span></a><span>TAG-SPARK</span></h1><p><span>-NTHU DAIL version</span></p><h2 id="Pytorch-code" data-id="Pytorch-code" style=""><a class="anchor hidden-xs" href="#Pytorch-code" title="Pytorch-code"><span class="octicon octicon-link"></span></a><span>Pytorch code</span></h2><h3 id="Our-environment" data-id="Our-environment" style=""><a class="anchor hidden-xs" href="#Our-environment" title="Our-environment"><span class="octicon octicon-link"></span></a><span>Our environment</span></h3><ul>
 <li><span>Windows</span></li>
 <li><span>Python 3.6</span></li>
 <li><span>Pytorch 1.8.0</span></li>
@@ -43,14 +43,14 @@
 <a href="https://medium.com/geekculture/install-cuda-and-cudnn-on-windows-linux-52d1501a8805" target="_blank" rel="noopener"><span>https://medium.com/geekculture/install-cuda-and-cudnn-on-windows-linux-52d1501a8805</span></a></p><h3 id="Environment-configuration" data-id="Environment-configuration" style=""><a class="anchor hidden-xs" href="#Environment-configuration" title="Environment-configuration"><span class="octicon octicon-link"></span></a><span>Environment configuration</span></h3><ol>
 <li>
 <p><span>Create a virtual environment and install PyTorch. In the 3rd step, please select the correct Pytorch version that matches your CUDA version from </span><a href="https://pytorch.org/get-started/previous-versions/" target="_blank" rel="noopener"><span>https://pytorch.org/get-started/previous-versions/</span></a><span>.</span></p>
-<pre><code>$ conda create -n deepcadz python=3.6
-$ conda activate deepcadz
+<pre><code>$ conda create -n tagspark python=3.6
+$ conda activate tagspark
 $ pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
 </code></pre>
 <p><em><span>Note:  </span><code>pip install</code><span> command is required for Pytorch installation.</span></em></p>
 </li>
-</ol><h3 id="Demos" data-id="Demos" style=""><a class="anchor hidden-xs" href="#Demos" title="Demos"><span class="octicon octicon-link"></span></a><span>Demos</span></h3><p><span>To try out the Python code, please activate the </span><code>deepcadz</code><span> environment first:</span></p><pre><code>$ source activate deepcadz
-</code></pre><p><strong><span>Example training</span></strong></p><p data-original-title="" title=""><span>To train a DeepCAD-Z model, we recommend starting with the demo script </span><code>demo_train_pipeline.py</code><span>. One demo dataset had been exisdted in the </span><code>datasets</code><span> folder. Use your own data by changing the training parameter </span><code>datasets_path</code><span>.</span></p><pre><code>python demo_train_pipeline.py
+</ol><h3 id="Demos" data-id="Demos" style=""><a class="anchor hidden-xs" href="#Demos" title="Demos"><span class="octicon octicon-link"></span></a><span>Demos</span></h3><p><span>To try out the Python code, please activate the </span><code>tagspark</code><span> environment first:</span></p><pre><code>$ source activate tagspark
+</code></pre><p><strong><span>Example training</span></strong></p><p data-original-title="" title=""><span>To train a TAG-SPARK model, we recommend starting with the demo script </span><code>demo_train_pipeline.py</code><span>. One demo dataset had been exisdted in the </span><code>datasets</code><span> folder. Use your own data by changing the training parameter </span><code>datasets_path</code><span>.</span></p><pre><code>python demo_train_pipeline.py
 </code></pre><p><strong><span>Example testing</span></strong></p><p><span>To test the denoising performance with pre-trained models, you can run the demo script </span><code>demo_test_pipeline.py</code><span> .  You can change the dataset and the model by changing the parameters </span><code>datasets_path</code><span> and </span><code>denoise_model</code><span>.</span></p><pre data-original-title="" title=""><code>python demo_test_pipeline.py
 </code></pre><p><strong><span>Param explanation</span></strong></p><p><span>Neet to notice these block!!!</span></p><h6 id="demo_train_pipelinepy" data-id="demo_train_pipelinepy"><a class="anchor hidden-xs" href="#demo_train_pipelinepy" title="demo_train_pipelinepy"><span class="octicon octicon-link"></span></a><span>demo_train_pipeline.py</span></h6><pre><code class="python hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
 <span></span>
@@ -114,7 +114,7 @@ num_workers = <span class="hljs-number">0</span>                       <span cla
             </a>
             <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
                 <div class="toc"><ul class="nav">
-<li class=""><a href="#DeepCAD-Z" title="DeepCAD-Z">DeepCAD-Z</a><ul class="nav">
+<li class=""><a href="#TAG-SPARK" title="TAG-SPARK">TAG-SPARK</a><ul class="nav">
 <li class=""><a href="#Pytorch-code" title="Pytorch code">Pytorch code</a><ul class="nav">
 <li class=""><a href="#Our-environment" title="Our environment">Our environment</a></li>
 <li class=""><a href="#Environment-configuration" title="Environment configuration">Environment configuration</a></li>
@@ -130,7 +130,7 @@ num_workers = <span class="hljs-number">0</span>                       <span cla
     </div>
     <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
         <div class="toc"><ul class="nav">
-<li class=""><a href="#DeepCAD-Z" title="DeepCAD-Z">DeepCAD-Z</a><ul class="nav">
+<li class=""><a href="#TAG-SPARK" title="TAG-SPARK">TAG-SPARK</a><ul class="nav">
 <li class=""><a href="#Pytorch-code" title="Pytorch code">Pytorch code</a><ul class="nav">
 <li class=""><a href="#Our-environment" title="Our environment">Our environment</a></li>
 <li class=""><a href="#Environment-configuration" title="Environment configuration">Environment configuration</a></li>
