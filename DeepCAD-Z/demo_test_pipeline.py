@@ -4,8 +4,8 @@ The demo shows how to construct the params and call the relevant functions for t
 The demo will automatically download tif file and corresponding model file for demo testing.
 See inside for details.
 """
-from deepcad.test_collection import testing_class
-from deepcad.utils import get_first_filename
+from tagspark.test_collection import testing_class
+from tagspark.utils import get_first_filename
 
 
 # %% Select file(s) to be processed (download if not present)
