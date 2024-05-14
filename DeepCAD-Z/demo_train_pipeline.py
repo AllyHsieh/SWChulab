@@ -1,17 +1,12 @@
 """
-This file will demonstrate pipeline for training microscopy data using the DeepCAD-RT algorithm.
-The demo shows how to construct the params and call the relevant functions for training DeepCAD-RT network.
+This file will demonstrate pipeline for training microscopy data using the TAG-SPARK algorithm.
+The demo shows how to construct the params and call the relevant functions for training TAG-SPARK network.
 The demo will automatically download tif file for demo training.
 See inside for details.
-
-* This demo is also available as a jupyter notebook (see demo_train_pipeline.ipynb) and Colab notebook (see
-DeepCAD_RT_demo_colab.ipynb)
-
-More information can be found in the companion paper.
 """
 
-from deepcad.train_collection import training_class
-from deepcad.utils import get_first_filename
+from tagspark.train_collection import training_class
+from tagspark.utils import get_first_filename
 
 
 
