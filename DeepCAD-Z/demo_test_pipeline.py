@@ -1,13 +1,8 @@
 """
-This file will help to demonstrate pipeline for testing microscopy data using the DeepCAD-RT algorithm.
-The demo shows how to construct the params and call the relevant functions for testing DeepCAD-RT network.
+This file will help to demonstrate pipeline for testing microscopy data using the TAG-SPARK algorithm.
+The demo shows how to construct the params and call the relevant functions for testing TAG-SPARK network.
 The demo will automatically download tif file and corresponding model file for demo testing.
 See inside for details.
-
-* This demo is also available as a jupyter notebook (see demo_test_pipeline.ipynb) and Colab notebook (see
-DeepCAD_RT_demo_colab.ipynb)
-
-More information can be found in the companion paper.
 """
 from deepcad.test_collection import testing_class
 from deepcad.utils import get_first_filename
