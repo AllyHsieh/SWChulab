@@ -31,25 +31,28 @@ If you want to display different elements on the figures:
 ```matlab
             p.addParameter('ShowData', true, isscalarlogical);
             p.addParameter('ShowNotches', false, isscalarlogical);
-            p.addParameter('ShowMean', true, isscalarlogical);
-            p.addParameter('ShowBox', true, isscalarlogical);
 ```
 In the violinplot, it usually shows the median value with white point. 
 ```matlab
-            p.addParameter('ShowMedian', true, isscalarlogical);  
+            p.addParameter('ShowMean', true, isscalarlogical);
+            p.addParameter('ShowBox', true, isscalarlogical);
+            p.addParameter('ShowMedian', true, isscalarlogical);
             p.addParameter('ShowWhiskers', true, isscalarlogical);
-            validSides={'full', 'right', 'left'};
-            checkSide = @(x) any(validatestring(x, validSides));
 ```
 If you want to show the violin plot on only half of the figure, you can set it to left or right.
 ```matlab
+            validSides={'full', 'right', 'left'};
+            checkSide = @(x) any(validatestring(x, validSides));
             p.addParameter('HalfViolin', 'full', checkSide);  
             validQuartileStyles={'boxplot', 'shadow', 'none'};
             checkQuartile = @(x)any(validatestring(x, validQuartileStyles));
             p.addParameter('QuartileStyle', 'boxplot', checkQuartile);
+```
+If you show the violin plot on only half of the figure, you can choose a different style for the plot on the other side.
+```matlab
             validDataStyles = {'scatter', 'histogram', 'none'}; 
             checkStyle = @(x)any(validatestring(x, validDataStyles));
-            p.addParameter('DataStyle', 'none', checkStyle); %If you show the violin plot on only half of the figure, you can choose a different style for the plot on the other side.
+            p.addParameter('DataStyle', 'none', checkStyle); 
             p.parse(data, pos, varargin{:});
             results = p.Results;
         end
