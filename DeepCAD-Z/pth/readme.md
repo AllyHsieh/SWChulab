@@ -4,3 +4,8 @@ if your select 'show_loss_record = True' in 'demo_train_pipeline.py', there will
 
 For example,
 
+![Example Loss function](https://github.com/AllyHsieh/SWChulab/edit/main/DeepCAD-Z/pth/example_img/loss.png)
+
+![Example MAE curve](https://github.com/AllyHsieh/SWChulab/edit/main/DeepCAD-Z/pth/example_img/mae.png)
+
+![Example MSE curve](https://github.com/AllyHsieh/SWChulab/edit/main/DeepCAD-Z/pth/example_img/mse.png)
