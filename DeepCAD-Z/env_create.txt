@@ -3,6 +3,7 @@ pip install pyyaml
 pip install matplotlib
 pip install gdown
 pip install scikit-image
+pip install pytorch_msssim
 set KMP_DUPLICATE_LIB_OK=TRUE  # Windows Command Prompt
 
 
