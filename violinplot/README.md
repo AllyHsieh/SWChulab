@@ -33,11 +33,17 @@ If you want to display different elements on the figures:
             p.addParameter('ShowNotches', false, isscalarlogical);
             p.addParameter('ShowMean', true, isscalarlogical);
             p.addParameter('ShowBox', true, isscalarlogical);
-            p.addParameter('ShowMedian', true, isscalarlogical);  %Usually, in the violinplot, it shows the median value with white point. 
+```
+In the violinplot, it usually shows the median value with white point. 
+```matlab
+            p.addParameter('ShowMedian', true, isscalarlogical);  
             p.addParameter('ShowWhiskers', true, isscalarlogical);
             validSides={'full', 'right', 'left'};
             checkSide = @(x) any(validatestring(x, validSides));
-            p.addParameter('HalfViolin', 'full', checkSide);  %If you want to show the violin plot on only half of the figure, you can set it to left or right.
+```
+If you want to show the violin plot on only half of the figure, you can set it to left or right.
+```matlab
+            p.addParameter('HalfViolin', 'full', checkSide);  
             validQuartileStyles={'boxplot', 'shadow', 'none'};
             checkQuartile = @(x)any(validatestring(x, validQuartileStyles));
             p.addParameter('QuartileStyle', 'boxplot', checkQuartile);
