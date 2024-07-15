@@ -23,7 +23,7 @@ If you want to change color and front size:
             p.addParameter('MedianColor', [1 1 1], iscolor);
             p.addParameter('ViolinAlpha', {0.3,0.15}, @(x)isnumeric(vertcat(x{:})));
             isscalarlogical = @(x) (islogical(x) & isscalar(x));
-
+```
 If you want to display different elements on the figures:
 
 "true" means print it on, opposite is "false". 
