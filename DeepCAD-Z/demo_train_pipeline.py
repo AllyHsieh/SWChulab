@@ -18,7 +18,7 @@ n_epochs = 10               # the number of training epochs
 GPU = '0'                   # the index of GPU used for computation (e.g. '0', '0,1', '0,1,2')
 pth_dir = './pth'           # pth file and visualization result file path
 num_workers = 0             # if you use Windows system, set this to 0.
-show_loss_record = True
+show_loss_record = True     # Save the recording of loss function across epochs to confirm if it had converge.
 
 # %% Setup some parameters for result visualization during training period (optional)
 
