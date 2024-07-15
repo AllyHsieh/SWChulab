@@ -65,13 +65,9 @@ datasets_path = f'datasets/29_4_2_4'  # folder containing tif files for training
 # %% First setup some parameters for training
 n_epochs = 5               # the number of training epochs
 GPU = '0'                   # the index of GPU used for computation (e.g. '0', '0,1', '0,1,2')
-train_datasets_size = 31  # dataset size for training (the number of patches)
-patch_x =  64         # the width and height of 3D patches
-patch_y =  128
-patch_t = 30               # the time dimension of 3D patches
-overlap_factor = 0       # the overlap factor between two adjacent patches
 pth_dir = './pth'           # pth file and visualization result file path
 num_workers = 0             # if you use Windows system, set this to 0.
+show_loss_record = True     # if you want to chck whether it convergent/divergent. results of MSE,MAE,Loss will be saved at pth folder, as .png
 ```
 note : `train_datasets_size` must > 2*`patch_t`, `patch_xy` neet to smaller than data width/height
 
@@ -87,11 +83,6 @@ denoise_model = f'29_4_2_4_202310260949'  # A folder containing pth models to be
 # %% First setup some parameters for testing
 test_datasize = 31  # dataset size for training (the number of patches)
 GPU = '0'
-patch_x =  64            # the width and height of 3D patches
-patch_y =  128
-patch_t = 30 
-                       # the time dimension of 3D patches
-overlap_factor = 0                  # the overlap factor between two adjacent patches
 num_workers = 0                       # if you use Windows system, set this to 0.   
 ```
 note : `train_datasets_size` must > 2*`patch_t`, `patch_xy` neet to smaller than data width/height
