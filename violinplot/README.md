@@ -55,4 +55,3 @@ If you show the violin plot on only half of the figure, you can choose a differe
             p.addParameter('DataStyle', 'none', checkStyle); 
             p.parse(data, pos, varargin{:});
             results = p.Results;
-        end
