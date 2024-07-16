@@ -5,15 +5,16 @@ if your select 'show_loss_record = True' in 'demo_train_pipeline.py', there will
 For example,
 
 Loss function:
+
 <img src="example/loss.png" alt="Example Loss function" width="300" >
 
 MAE curve:
 
-![Example MAE curve](DeepCAD-Z/pth/example/mae.png)
+<img src="example/mae.png" alt="Example MAE curve" width="300" >
 
 MSE curve:
 
-![Example MSE curve](DeepCAD-Z/pth/example/mse.png)
+<img src="example/mse.png" alt="Example MSE curve" width="300" >
 
 From these figures, we know that after 20 epoches, the model has converge, and from MSE curve, which it has already overfitting.
 
