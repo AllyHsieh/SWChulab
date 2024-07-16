@@ -55,6 +55,10 @@ python demo_test_pipeline.py
 
 Need to notice these block!!!
 
+For training: input datapath and number of epochs
+
+For test: input datapath and model path
+
 ###### demo_train_pipeline.py
 
 ```python=18
@@ -81,11 +85,9 @@ datasets_path = f'datasets/29_4_2_4'  # folder containing tif files for testing
 denoise_model = f'29_4_2_4_202310260949'  # A folder containing pth models to be tested
 
 # %% First setup some parameters for testing
-test_datasize = 31  # dataset size for training (the number of patches)
 GPU = '0'
 num_workers = 0                       # if you use Windows system, set this to 0.   
 ```
-note : `train_datasets_size` must > 2*`patch_t`, `patch_xy` neet to smaller than data width/height
 
 
 (reference https://github.com/cabooster/DeepCAD-RT/blob/main/README.md)
