@@ -6,15 +6,15 @@ For example,
 
 Loss function:
 
-![Example Loss function](https://github.com/AllyHsieh/SWChulab/edit/main/DeepCAD-Z/pth/example/loss.png)
+![Example Loss function](DeepCAD-Z/pth/example/loss.png)
 
 MAE curve:
 
-![Example MAE curve](https://github.com/AllyHsieh/SWChulab/edit/main/DeepCAD-Z/pth/example/mae.png)
+![Example MAE curve](DeepCAD-Z/pth/example/mae.png)
 
 MSE curve:
 
-![Example MSE curve](https://github.com/AllyHsieh/SWChulab/edit/main/DeepCAD-Z/pth/example/mse.png)
+![Example MSE curve](DeepCAD-Z/pth/example/mse.png)
 
 From these figures, we know that after 20 epoches, the model has converge, and from MSE curve, which it has already overfitting.
 
