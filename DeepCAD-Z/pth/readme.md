@@ -5,7 +5,6 @@ if your select 'show_loss_record = True' in 'demo_train_pipeline.py', there will
 For example,
 
 Loss function:
-
 <img src="example/loss.png" alt="Example Loss function" width="300" >
 
 MAE curve:
