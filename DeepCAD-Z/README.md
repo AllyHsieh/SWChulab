@@ -75,7 +75,7 @@ pth_dir = './pth'           # pth file and visualization result file path
 num_workers = 0             # if you use Windows system, set this to 0.
 show_loss_record = True     # if you want to chck whether it convergent/divergent. results of MSE,MAE,Loss will be saved at pth folder, as .png
 ```
-note : [Example for recording the loss function](DeepCAD-Z/pth)
+note : [Example for recording the loss function](DeepCAD-Z/pth/readme.md)
 
 
 
