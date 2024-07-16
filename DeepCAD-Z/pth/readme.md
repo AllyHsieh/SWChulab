@@ -12,10 +12,10 @@ MAE curve:
 
 <img src="example/mae.png" alt="Example MAE curve" width="300" >
 
-MSE curve:
+MSE curve: from MSE curve, which it has already overfitting.
 
 <img src="example/mse.png" alt="Example MSE curve" width="300" >
 
-From these figures, we know that after 20 epoches, the model has converge, and from MSE curve, which it has already overfitting.
+From these figures, we know that after 20 epoches, the model has converge and even overfitting 
 
 You should decrease the iterations (epoches) of training.
