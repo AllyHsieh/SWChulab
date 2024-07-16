@@ -6,7 +6,7 @@ For example,
 
 Loss function:
 
-![Example Loss function](DeepCAD-Z/pth/example/loss.png)
+<img src="example/loss.png" alt="Example Loss function" width="300" >
 
 MAE curve:
 
