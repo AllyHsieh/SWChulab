@@ -11,23 +11,21 @@ load('dof40.mat')
 We assume the result of profile with 2 peaks at the edge, so we try to find the peaks first.
 
 ```matlab
-intx=1:0.01:size(dof,1);
 for i=1:size(dof,2)
     l=dof(:,i);
     intl=interp1(x,l,intx,'linear');  %We use interpolation to find the position corresponding to specific value
     intlbox(i,:)=intl;
     [pks,locs] = findpeaks(intl);  %We find the peak and position in z, we expect to find 2 peaks, if it can find only one or more than 2, it will show you error.
     h= sort(pks,'descend'); %Sorting the peaks follow depths
-rightmax = find(intl==h(1));
-leftmax = find(intl==h(2));
-half_max=(intl(rightmax)-min(intl))/2;  %find the FWHM value
-[~,maxnum]=min(sqrt(intl(rightmax:end).^2-half_max^2)); %在右側的最高點向右找,找到最接近FWHM的位置,也就是與FWHM相對距離最短的
-maxnum=maxnum+rightmax;  %找到的位置要再加上(向右)原本最高點的起始值
-[~,minnum]=min(sqrt(intl(1:leftmax).^2-half_max^2)); %在左側的最高點向左找,找到最接近FWHM的位置,也就是與FWHM相對距離最短的
-FWHM=abs(maxnum-minnum); %找到的位置要再減掉(向左)原本最高點的起始值
-record(i)=FWHM;
-poslist(i,:)=[maxnum,minnum];
-
+    rightmax = find(intl==h(1));
+    leftmax = find(intl==h(2));
+    half_max=(intl(rightmax)-min(intl))/2;  %find the FWHM value
+    [~,maxnum]=min(sqrt(intl(rightmax:end).^2-half_max^2)); %在右側的最高點向右找,找到最接近FWHM的位置,也就是與FWHM相對距離最短的
+    maxnum=maxnum+rightmax;  %找到的位置要再加上(向右)原本最高點的起始值
+    [~,minnum]=min(sqrt(intl(1:leftmax).^2-half_max^2)); %在左側的最高點向左找,找到最接近FWHM的位置,也就是與FWHM相對距離最短的
+    FWHM=abs(maxnum-minnum); %找到的位置要再減掉(向左)原本最高點的起始值
+    record(i)=FWHM;
+    poslist(i,:)=[maxnum,minnum];
 end
 ```
 
