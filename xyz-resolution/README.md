@@ -196,3 +196,4 @@ avgnorm=mean(normempty,1);
 
 圖4: 底色的上下邊界是由平均值與標準差決定;中間的實線即平均值的結果
 
+***如果你要畫Violin plot,可以去下載violin plot的資料夾***
