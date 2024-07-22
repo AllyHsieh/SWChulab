@@ -1,4 +1,4 @@
-***DOF analysis
+***DOF analysis***
 
 load in example data
 
