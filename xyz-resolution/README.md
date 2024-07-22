@@ -1,11 +1,16 @@
 # Practival XYZ and DOF analysis
 
+**practical XYZ resolution analysis**
+
 <img src="image/PSF_resolution.jpg" alt="practical XYZ resolution analysis" width="300" >
+
+**practical DOF analysis**
 
 <img src="image/DOF_FLB.jpg" alt="practical DOF analysis" width="300" >
 
 
-**XYZ resolution analysis with FLB** (flb_xyz_resolution.m)
+## XYZ resolution analysis with FLB 
+(flb_xyz_resolution.m)
 
 You can load in example data for test.
 
@@ -134,7 +139,8 @@ end
 ```
 
 
-**DOF analysis**  (dof_axial_intensity.m)
+## DOF analysis
+(dof_axial_intensity.m)
 
 You can load in example data for test.
 
