@@ -1,8 +1,8 @@
 **Practival XYZ and DOF analysis**
 
-<img src="image/PSF_resolution-07-07.tif" alt="practical XYZ resolution analysis" width="300" >
+<img src="image/DOF_FLB.jpg" alt="practical XYZ resolution analysis" width="300" >
 
-<img src="image/flb_curve_MeanStd.jpg" alt="practical DOF analysis" width="300" >
+<img src="image/PSF_resolution.jpg" alt="practical DOF analysis" width="300" >
 
 
 **XYZ resolution analysis with FLB** (flb_xyz_resolution.m)
