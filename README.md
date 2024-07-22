@@ -1,5 +1,5 @@
 # SWChulab
-- [Reconstruction of high-speed volumetric images](tdms_to_tiff_v9-bk/README.md)
+- [Reconstruction of high-speed volumetric images](tdms_to_tiff_v9-bk)
 
 - [Simulation of TAG lens extended DOF](SimulationDOF)
 
