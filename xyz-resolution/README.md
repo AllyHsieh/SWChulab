@@ -41,22 +41,6 @@ poslist([remove1,remove2],:)=[];
 intlbox([remove1,remove2],:)=[];
 ```
 
-```matlab
-avgFWHM=ceil(mean(record));
-empty=zeros(size(record,2),2*avgFWHM+1);
-for i=1:size(record,2)
-    expandl=[zeros(1,avgFWHM),intlbox(i,:),zeros(1,avgFWHM)];
-    midd=ceil(length(expandl)+1/2);
-    midpoint=poslist(i,2)+(poslist(i,1)-poslist(i,2))/2;
-    s=midpoint-ceil(avgFWHM/2);
-    f=midpoint+ceil(avgFWHM*2);
-    empty(i,midd-(f-s)/2:midd+(f-s)/2)=expandl(s:f);
-    figure(1),plot(expandl(s:f));hold on
-end
-%
-normempty=normalize(empty(:,midd-(f-s)/2:midd+(f-s)/2));
-```
-
 以下我們以統計方式算出平均值與標準差
 
 ```matlab
