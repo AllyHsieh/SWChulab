@@ -1,3 +1,108 @@
+**XYZ resolution analysis with FLB** ()
+
+```matlab
+flb=double(tiffreadVolume('25xNA1.05_200nm_HWP308_PMT0.79_dt0.004_z0-0.5-10_2.tif'));
+```
+
+```matlab
+pick=329;error=0.195; %error range(px)
+voxelz=0.5; %um
+voxelxy=400/512/4; %um
+bwflb=mean(flb,3);
+bwflb(bwflb>20)=1;
+bwflb(bwflb~=1)=0;
+BW2 = bwareaopen(bwflb, 10);
+mask=bwlabeln(BW2);
+%mask=AW;
+%mask=repmat(m, [1 1 size(flb,3)]);
+```
+
+
+```matlab
+newmask=zeros(size(mask));k=1;
+xyrecord=zeros(max(max(mask)),100);
+record=zeros(max(max(mask)),size(flb,3));
+for i=1:max(max(mask))
+    empty=mask;
+    empty(empty~=i)=0;
+    empty(empty>0)=1;
+    se = strel('disk', 3);
+    dimask = imdilate(empty, se);
+    roi=dimask.*flb;
+    xy=squeeze(sum(roi(:,:,8),1))';
+    f=find(xy>0);
+    temp=[0;xy(f(1):f(end));0];
+    xyrecord(i,1:length(temp))=temp;
+    
+    try
+        xyfwhmbox(i)=gfit(temp);
+    catch exception
+        xyfwhmbox(i)=0;
+        roi1(k)=i;k=k+1;
+    end
+    record(i,:)=squeeze(sum(roi,[1,2]));
+    try
+        zfwhmbox(i)=gfit(squeeze(sum(roi,[1,2])));
+    catch exception
+        zfwhmbox(i)=0;
+        roi11(k)=i;k=k+1;
+    end
+    newmask=newmask+dimask.*i;
+    newmask(newmask>i)=0;
+end
+```
+
+```matlab
+[delete,outxy,outz]=remove(xyfwhmbox,zfwhmbox,voxelxy,voxelz,error);
+```
+
+```matlab
+singleFLB(flb,334,359,398,414)
+avgr=mean(xyrecord./mean(xyrecord,2),1);
+stdr=std(xyrecord./mean(xyrecord,2),1);
+upper=avgr+stdr;lower=avgr-stdr;
+fillplot(upper(1:15),lower(1:15),avgr(1:15));axis tight;hold on
+y=avgr(1:15)';
+x=1:length(y);
+y=y';
+gaussianModel = fittype('a*exp(-((x-b)/c)^2)', 'independent', 'x', 'dependent', 'y');
+initialGuess = [max(y), x(find(y == max(y))), 10]; % 初始化參數為 [振幅, 平均值, 標準差]
+fittmodel = fit(x', y', gaussianModel, 'StartPoint', initialGuess);
+plot(fittmodel)
+```
+
+```matlab
+function fwhm=gfit(y)
+x=1:length(y);
+y=y';
+gaussianModel = fittype('a*exp(-((x-b)/c)^2)', 'independent', 'x', 'dependent', 'y');
+initialGuess = [max(y), x(find(y == max(y))), 10]; % 初始化參數為 [振幅, 平均值, 標準差]
+fittmodel = fit(x', y', gaussianModel, 'StartPoint', initialGuess);
+coefficients = coeffvalues(fittmodel);
+mu = coefficients(2); % 高斯分布的均值
+sigma = coefficients(3); % 高斯分布的標準差
+amplitude = coefficients(1); % 高斯分布的幅度
+fwhm = 2 * sqrt(2 * log(2)) * sigma/sqrt(2);
+end
+```
+
+```matlab
+function show(voxel,y)
+x=1:length(y);
+y=y';
+gaussianModel = fittype('a*exp(-((x-b)/c)^2)', 'independent', 'x', 'dependent', 'Intensity');
+initialGuess = [max(y), x(find(y == max(y))), 10]; % 初始化參數為 [振幅, 平均值, 標準差]
+fittmodel = fit(x', y', gaussianModel, 'StartPoint', initialGuess);
+coefficients = coeffvalues(fittmodel);
+mu = coefficients(2); % 高斯分布的均值
+sigma = coefficients(3); % 高斯分布的標準差
+amplitude = coefficients(1); % 高斯分布的幅度
+fwhm = 2 * sqrt(2 * log(2)) * sigma/sqrt(2);
+figure,scatter(x,y);hold on;plot(fittmodel);axis tight;title(['FWHM = ',num2str(fwhm*voxel),' voxel=',num2str(voxel)])
+end
+```
+
+
 **DOF analysis**  (dof_axial_intensity.m)
 
 You can load in example data for test.
