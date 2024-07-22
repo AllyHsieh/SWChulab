@@ -1,3 +1,10 @@
+**Practival XYZ and DOF analysis**
+
+<img src="images/flb_curve_MeanStd.jpg" alt="practical XYZ resolution analysis" width="300" >
+
+<img src="images/flb_curve_MeanStd.jpg" alt="practical DOF analysis" width="300" >
+
+
 **XYZ resolution analysis with FLB** (flb_xyz_resolution.m)
 
 You can load in example data for test.
@@ -27,7 +34,7 @@ BW2 = bwareaopen(bwflb, 10);  %當這個"螢光球"相鄰的像素小於10個點
 mask=bwlabeln(BW2);  %%將過濾後的"螢光球"重新編號,你可以從這裡指定特定標號的螢光球來看其xyz resolution profile
 ```
 
-<img src="images/flb_curve_MeanStd.jpg" alt="practical DOF analysis" width="300" >
+<img src="images/flb_img.jpg" alt="Automatically segmentation ROIs" width="300" >
 
 以下將把"螢光球"依序取出,畫出趨勢線,利用高斯fitting curve找出對應的高斯波型,計算此高斯波形的FWMH並記錄下來
 
@@ -73,6 +80,8 @@ end
 
 計算平均值與標準差
 
+<img src="images/flb_curve_MeanStd.jpg" alt="Average and standard deviation" width="300" >
+
 ```matlab
 avgr=mean(xyrecord./mean(xyrecord,2),1);
 stdr=std(xyrecord./mean(xyrecord,2),1);
@@ -105,6 +114,8 @@ end
 ```
 
 這個function是為了呈現原始點與fitting後的對照結果
+
+<img src="images/xyz_singleFLB.jpg" alt="single FLB xyz resolution" width="300" >
 
 ```matlab
 function show(voxel,y)
