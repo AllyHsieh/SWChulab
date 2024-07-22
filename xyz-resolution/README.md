@@ -1,6 +1,8 @@
 ***DOF analysis***
 
-load in example data
+You can load in example data for test.
+
+Example data include 30 ROIs for calculation.
 
 ```matlab
 load('dof40.mat')
