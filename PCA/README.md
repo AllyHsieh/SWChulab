@@ -1,4 +1,4 @@
-**Principle Component Analysis**
+# Principle Component Analysis
 
 dataA為後續的主要分析的資料，此範例設定為df/f的形式(任意你想分析的資料形式)
   
