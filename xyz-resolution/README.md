@@ -1,4 +1,4 @@
-**DOF analysis**(dof_axial_intensity.m)
+**DOF analysis**  (dof_axial_intensity.m)
 
 You can load in example data for test.
 
@@ -68,7 +68,7 @@ avgnorm=mean(normempty,1);
 
 由以上的結果我們可以畫出以下的圖:
 
-[]()
+<img src="DOF_4panels_fig.jpg" alt="practical DOF analysis" width="300" >
 
 圖1: 畫出所有還在閾值內的line profile
 
