@@ -121,6 +121,10 @@ function singleFLB(img,x1,x2,y1,y2)
 figure(1000),subplot(221),imagesc(sum(img(y1:y2,x1:x2,:),3));axis image;title('xy')
 figure(1000),subplot(222),imagesc(squeeze(sum(img(y1:y2,x1:x2,:),2)));title('xz')
 figure(1000),subplot(223),imagesc(squeeze(sum(img(y1:y2,x1:x2,:),1))');title('yz')
+xy=squeeze(mean(img(y1:y2,x1:x2,:),3));
+xz=squeeze(sum(img(y1:y2,x1:x2,:),2));
+figure(2000),subplot(121),plot(sum(xy,1),'o');title('xy profile')
+figure(2000),subplot(122),plot(sum(xz,1),'o');title('xz profile')
 end
 
 function fillplot(upper,lower,avg)
