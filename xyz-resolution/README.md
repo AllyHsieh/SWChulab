@@ -1,4 +1,4 @@
-**Practival XYZ and DOF analysis**
+# Practival XYZ and DOF analysis
 
 <img src="image/PSF_resolution.jpg" alt="practical XYZ resolution analysis" width="300" >
 
