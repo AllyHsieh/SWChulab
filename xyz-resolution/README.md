@@ -1,6 +1,6 @@
 **Practival XYZ and DOF analysis**
 
-<img src="images/flb_curve_MeanStd.jpg" alt="practical XYZ resolution analysis" width="300" >
+<img src="images/PSF_resolution-07-07.tif" alt="practical XYZ resolution analysis" width="300" >
 
 <img src="images/flb_curve_MeanStd.jpg" alt="practical DOF analysis" width="300" >
 
