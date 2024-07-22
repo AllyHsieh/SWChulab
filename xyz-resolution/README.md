@@ -34,7 +34,7 @@ BW2 = bwareaopen(bwflb, 10);  %當這個"螢光球"相鄰的像素小於10個點
 mask=bwlabeln(BW2);  %%將過濾後的"螢光球"重新編號,你可以從這裡指定特定標號的螢光球來看其xyz resolution profile
 ```
 
-<img src="image/flb_img.jpg" alt="Automatically segmentation ROIs" width="300" >
+<img src="image/flb_img.jpg" alt="Automatically segmentation ROIs" width="500" >
 
 以下將把"螢光球"依序取出,畫出趨勢線,利用高斯fitting curve找出對應的高斯波型,計算此高斯波形的FWMH並記錄下來
 
