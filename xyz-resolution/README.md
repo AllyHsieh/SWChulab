@@ -33,7 +33,7 @@ end
 
 為了避免過大誤差值,直接設定某閾值作為篩選
 
-```
+```matlab
 err=median(record);
 remove1=find((record>err+90*voxelz));
 remove2=find((record<err-90*voxelz));
@@ -43,7 +43,7 @@ poslist([remove1,remove2],:)=[];
 intlbox([remove1,remove2],:)=[];
 ```
 
-```
+```matlab
 avgFWHM=ceil(mean(record));
 empty=zeros(size(record,2),2*avgFWHM+1);
 for i=1:size(record,2)
@@ -61,22 +61,20 @@ normempty=normalize(empty(:,midd-(f-s)/2:midd+(f-s)/2));
 
 以下我們以統計方式算出平均值與標準差
 
-```
+```matlab
 error=std(normempty(:,1:100:end));
 avgnorm=mean(normempty,1);
 ```
 
 由以上的結果我們可以畫出以下的圖:
 
-```
-figure(12),subplot(222),errorbar([1:100:size(normempty,2)],avgnorm(1:100:end),error);xlabel('distance(\mum)');axis tight;ticklabel(8/100)
-figure(12),subplot(221),plot(normempty');ticklabel(8/100);xlabel('distance(\mum)');axis tight;title(['DOF=',num2str(mean(orirecord)),'\mum'])
-```
+[]()
 
-我們可以將平均值與標準差畫成以下的圖,底色的上下邊界是由平均值與標準差決定;中間的實線即平均值的結果:
+圖1: 畫出所有還在閾值內的line profile
 
-```
-avg=mean(normempty);
-upper=avg+std(normempty);
-lower=avg-std(normempty);
-```
+圖2: 以平均值為主畫出各深度的error bar
+
+圖3: 將各ROI平均值標出
+
+圖4: 底色的上下邊界是由平均值與標準差決定;中間的實線即平均值的結果:
+
