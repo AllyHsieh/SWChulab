@@ -1,14 +1,14 @@
-DOF analysis
+***DOF analysis
 
 load in example data
 
-```
+```matlab
 load('dof40.mat')
 ```
 
 We assume the result of profile with 2 peaks at the edge, so we try to find the peaks first.
 
-```
+```matlab
 intx=1:0.01:size(dof,1);
 for i=1:size(dof,2)
     l=dof(:,i);
