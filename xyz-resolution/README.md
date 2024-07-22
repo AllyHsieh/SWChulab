@@ -1,4 +1,6 @@
-***DOF analysis***
+**DOF analysis**
+
+(dof_axial_intensity.m)
 
 You can load in example data for test.
 
