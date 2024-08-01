@@ -1,6 +1,8 @@
-# Reconstruction of high-speed scanning volumetric images
+## Reconstruction of high-speed scanning volumetric images
 
 Following is the steps of reconstruction:
+
+0. Before starting, please check the parameters for calibration of y-axis:
 
 1. Sorting 3D image from 2D tiff
 
@@ -9,8 +11,6 @@ Following is the steps of reconstruction:
 3. Time correction for voxel dependent
 
 4. Reslice in z direction into layer/micrometer unit
-
-Before starting, please check the parameters for calibration of y-axis:
 
 **previousreconstruct_checkyaxisrescale.m**
 
@@ -58,6 +58,8 @@ switch FOV
 end
 ```
 
+# 進入重建三維體積影像的階段
+
 **main.m**
 
 一樣要將路徑加入,才可以呼叫資料夾中的function
@@ -67,6 +69,8 @@ addpath('.\correct_yaxis\');
 addpath('.\time_corr\'); 
 addpath('.\reslice\');
 ```
+
+**Sorting 3D image from 2D tiff & Calibration of the edges result from galvo accelration**
 
 你需要輸入以下的參數來決定存放的資料夾,與實驗設定:
 
@@ -80,6 +84,8 @@ y_pixel = 128; %重新組圖後的影像尺寸Y
 z_pixel = 265; %重新組圖後的影像尺寸Z
 ```
 
+**Time correction for voxel dependent**
+
 完成Sorting 與 y-axis calibration 後,會進行voxel-dependent time correction
 ```matlab
 %% time correction
@@ -90,6 +96,8 @@ xyzt_raw_data_timecorr = xyzt_raw_data; %如果不需要,可以直接更新名�
 disp('no timecorr')
 toc
 ```
+
+**Reslice in z direction into layer/micrometer unit**
 
 在reslice的部分,是針對z方向的排序有所調整,可以依照layer(TAG lens訊號)或是z(實際的物理單位:micrometer)
 
@@ -115,7 +123,13 @@ elseif method == "layer"
 end
 ```
 
-輸出的檔案會存在新增的資料夾,該資料夾的命名方式為: "method_interval_reslice"
+當你需要重新排列z方向的定義,請直接跑reslice section
+
+load in "已經完成sorting與time correciton的矩陣": xyzt_raw_data_timecorr.mat
+
+與設定 "輸出的資料夾名稱": outputmatdir 以及 folder
+
+輸出的檔案會存在新增的資料夾,該資料夾的命名方式為: "method_interval_reslice",當你設定不同儲存方式時,會直接新增資料夾而不會覆蓋檔案
 
 method = z or layer
 
