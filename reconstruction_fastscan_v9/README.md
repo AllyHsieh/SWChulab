@@ -70,7 +70,7 @@ addpath('.\reslice\');
 
 你需要輸入以下的參數來決定存放的資料夾,與實驗設定:
 
-```
+```matlab
 inputtiffdir='H:\Leo\240708\fast\'; %你的快掃體積資料夾存放的位置
 outputmatdir='H:\Leo\240708\fast\'; %輸出檔案將存放的位置
 folder = 'trial5'; %在這個資料夾內,會存放你的快掃tiff檔案
@@ -81,7 +81,7 @@ z_pixel = 265; %重新組圖後的影像尺寸Z
 ```
 
 完成Sorting 與 y-axis calibration 後,會進行voxel-dependent time correction
-```
+```matlab
 %% time correction
 tic
 %xyzt_raw_data_timecorr = TAG_preprocessing(xyzt_raw_data); %如果要進行time correction可以利用TAG_preprocessing這個function
@@ -99,7 +99,7 @@ layer: 代表"N_layer"張的影像,會被疊在一起
 
 z: 代表先算出間隔N_z的大小,每個間隔內的影像張數因為TAG lens是以sine wave排列,所以有所不同,再利用內插法求出該間隔中的中間值,作為該位置的影像
 
-```
+```matlab
 save_type = "interpolate";
 method = "z";
 z_physical_distance = 94; % DOF單位是micrometers
@@ -121,7 +121,7 @@ method = z or layer
 
 interval = N_z or N_layer
 
-```
+```matlab
 output_reslice_filename = convertStringsToChars(strcat(method,'_',num2str(interval),'_reslice'));
 ```
 
@@ -129,7 +129,7 @@ output_reslice_filename = convertStringsToChars(strcat(method,'_',num2str(interv
 
 存出檔案會很耗時,可以只輸出你要的格式
 
-```
+```matlab
 %% extract data from raw stack
 % xyt: output x-y-t stack in ./ch1_out_xyt dir, using 1(save), 0(don't save)
 % xyz: output x-y-z stack in ./ch1_out_xyz dir, using 1(save), 0(don't save)
