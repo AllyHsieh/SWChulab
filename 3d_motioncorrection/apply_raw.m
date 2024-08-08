@@ -19,9 +19,6 @@ total_img = zeros([size(fixedVolume) z_slice_num]);
 total_img(:,:,:,1) = fixedVolume;
 mean_volume = double(fixedVolume);
 %%
-x_loc = zeros([1,z_slice_num]);
-y_loc = zeros([1,z_slice_num]);
-z_loc = zeros([1,z_slice_num]);
 parfor i = 3:z_slice_num+1
     movingVolume = tiffreadVolume(fullfile(path, "VOL_"+num2str(i)+".tiff"));
     total_img(:,:,:,i-1) = movingVolume;
