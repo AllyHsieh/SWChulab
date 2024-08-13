@@ -20,8 +20,6 @@ We utilize the PCC for various image comparison tasks, for example, determining 
 
 <img src="img/mouseslice_corr.jpg" alt="correlation analysis" width="400" >
 
-Or in image registration, PCC is used as a similarity metric to measure the alignment accuracy between two images. (As [3d motion correction](3d_motioncorrection)) 
-
 **code**
 
 When you analyze the correlation map, you should notice:
@@ -51,3 +49,8 @@ We need to crop the slow scan image to fit the fast scan. Find the first and las
 **Conclusion**
 
 After at least 5 times test, we find that the practical DOF value is quite similar to theoritical value (error < 10%).  
+
+Another application:
+
+In image registration, PCC is used as a similarity metric to measure the alignment accuracy between two images. (Such as [3d motion correction](3d_motioncorrection)) 
+
