@@ -30,5 +30,5 @@ Notably that PSNR considers the max intensity of image, so the value must be lar
 
 <img src="img/depth_SNR.png" alt="SNR" width="400" >
 
-<img src="img/depth_PSNR.tif" alt="PSNR" width="400" >
+<img src="img/depth_PSNR.jpg" alt="PSNR" width="400" >
 
