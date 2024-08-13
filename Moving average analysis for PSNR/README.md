@@ -26,4 +26,9 @@ $$PSNR=10log_10(\frac{MAX^2}{MSE})$$
 
 where MAX represents the maximun intensity of the image.
 
+Notably that PSNR considers the max intensity of image, so the value must be larger than SNR value. PSNR value usually "overestimate" the image quality, and SNR value usually "underestimate" the image quality. Therefore, the image quality should be between these two value.
+
+<img src="img/depth_SNR.png" alt="SNR" width="400" >
+
+<img src="img/depth_PSNR.png" alt="PSNR" width="400" >
 
