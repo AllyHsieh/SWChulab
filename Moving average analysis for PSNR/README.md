@@ -12,7 +12,7 @@ where I is the average intensity of the signal in the image, bg represents the a
 
 Notably, we select different ROI to define signal and background region and do the average calcualtion:
 
-<img src="img/SNR.png" alt="PCC" width="500" >
+<img src="img/SNR_I_bg.png" alt="SNR" width="500" >
 
 *reference:*
 
@@ -30,5 +30,5 @@ Notably that PSNR considers the max intensity of image, so the value must be lar
 
 <img src="img/depth_SNR.png" alt="SNR" width="400" >
 
-<img src="img/depth_PSNR.png" alt="PSNR" width="400" >
+<img src="img/depth_PSNR.tiff" alt="PSNR" width="400" >
 
