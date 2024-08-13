@@ -16,20 +16,11 @@ Notably, we select different ROI to define signal and background region and do t
 
 *reference:*
 
-Y. Zhao, M. Zhang, W. Zhang, Y. Zhou, L. Chen, Q. Liu, P. Wang, R. Chen, X. Duan, F. Chen, H. Deng, Y. Wei, P. Fei, Y. H. Zhang, Nat Methods 2022, 19(3), 359-369, https://doi.org/10.1038/s41592-022-01395-5.
+*Y. Zhao, M. Zhang, W. Zhang, Y. Zhou, L. Chen, Q. Liu, P. Wang, R. Chen, X. Duan, F. Chen, H. Deng, Y. Wei, P. Fei, Y. H. Zhang, Nat Methods 2022, 19(3), 359-369, https://doi.org/10.1038/s41592-022-01395-5.*
 
-Peak Signal to Noise Ratio (PSNR)
-10
-On the other hand, PSNR is specifically used to
-e valuate how much the quality of
-the signal is affected by distortion . It calculates t he ratio between the maximum intensity
-of the image and the power of the noise affecting the image. Therefore, it needs a
-noise free image as ground truth (or to calculate the MSE , which quantifies the
-average squared difference between two imag es. Smaller MSE suggests less disparity
-between the images, indicating lower noise. Higher PSNR values correspond to lower
-levels of noise or distortion in the image, indicating higher image quality or fidelity.
-where MAX
+**Peak Signal to Noise Ratio (PSNR)**
 
-**PSNR**
+On the other hand, PSNR is specifically used to valuate how much the quality of the signal is affected by distortion. It calculates the ratio between the maximum intensity of the image and the power of the noise affecting the image. Therefore, it needs **a noise free image as ground truth** (or to calculate the MSE , which quantifies the average squared difference between two images. Smaller MSE suggests less disparity between the images, indicating lower noise. Higher PSNR values correspond to lower levels of noise or distortion in the image, indicating higher image quality.
+
   
 
