@@ -8,4 +8,14 @@ $$r=\frac{\Sigma^n_i(X_i-\bar{X})(Y_i-\bar{XY})} {\sqrt{\Sigma^n_i(X-\bar{X})^2}
 
 $$\bar{X}$$ and $$\bar{Y}$$ are the average of variables respectively.
 
-As r = 1 indicates a perfect positive linear relationship, meaning that as one variable increases, the other variable increases proportionally. As r = 1 indicates a perfect negative linear relationship, meaning that as one variable increases, the other variable decreases proportionally. As r = 0 indicates no linear relationship b etween the variables.
+As r = 1 indicates a perfect positive linear relationship, meaning that as one variable increases, the other variable increases proportionally. 
+
+As r = 1 indicates a perfect negative linear relationship, meaning that as one variable increases, the other variable decreases proportionally. 
+
+As r = 0 indicates no linear relationship b etween the variables.
+
+<img src="image/PC1.png" alt="PCC" width="300" >
+
+We utilize the PCC for various image comparison tasks, for example, in image registration, PCC is used as a similarity metric to measure the alignment accuracy between two images. (As [3d motion correction](3d_motioncorrection)) 
+
+Or determining the DOF of the TAG lens by analyzing the correlation contour maps of low and high speed scanning images to find the best corresponding layer.
