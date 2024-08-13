@@ -24,13 +24,13 @@ We utilize the PCC for various image comparison tasks, for example, determining 
 
 When you analyze the correlation map, you should notice:
 
-1. To increase fast scan image quality by doing time average, which increase the PCC value while comparing with slow scan image.
+1. To increase fast scan image quality by doing time average, which increase the PCC value while comparing with slow scan image. (本身影像結構愈清晰,比對結果愈佳)
 
 ```matlab
 fast=timeproj(10:115,17:116,:); % 10s or 10 volumes projection
 ```
 
-2. There is concentric circle effect at different depth of slow scan image, which result in the FOV between fast and slow scan image is a bit different. Different FOV is difficult to find the best corresponding layer, and the PCC value would be low. (r>0.7 is better)
+2. There is concentric circle effect at different depth of slow scan image, which result in the FOV between fast and slow scan image is a bit different. Different FOV is difficult to find the best corresponding layer, and the PCC value would be low. (r>0.7 is better) (兩張比對的影像需要幾乎相同的畫面,才能比對出好的r值,並且建議r>0.7才算是理想的情況)
 
 ```matlab
 start=10;final=40;
@@ -44,7 +44,11 @@ We need to crop the slow scan image to fit the fast scan. Find the first and las
 
 *It is better to crop slow scan and do the resize to fit fast scan, because the digital resolution of slow scan image is better than fast scan image.*
 
-3. Find the maximun value at the first and layer layer of fast scan, and you can correspond them to slow scan with physical distance, i.e. DOF.
+3. Find the maximun value at the first and layer layer of fast scan, and you can correspond them to slow scan with physical distance, i.e. DOF. (從快掃首/末張對應的慢掃層數,就可以依照voxel size換算回實際的延展長度)
+
+```matlab
+figure(j),subplot(235),imagesc(s2);axis image;title(['slow scan, depth = ',num2str(p2*voxel),'\mum'])
+```
 
 **Conclusion**
 
