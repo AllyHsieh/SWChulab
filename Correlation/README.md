@@ -21,3 +21,33 @@ We utilize the PCC for various image comparison tasks, for example, determining 
 <img src="img/mouseslice_corr.jpg" alt="correlation analysis" width="400" >
 
 Or in image registration, PCC is used as a similarity metric to measure the alignment accuracy between two images. (As [3d motion correction](3d_motioncorrection)) 
+
+**code**
+
+When you analyze the correlation map, you should notice:
+
+1. To increase fast scan image quality by doing time average, which increase the PCC value while comparing with slow scan image.
+
+```matlab
+fast=timeproj(10:115,17:116,:); % 10s or 10 volumes projection
+```
+
+2. There is concentric circle effect at different depth of slow scan image, which result in the FOV between fast and slow scan image is a bit different. Different FOV is difficult to find the best corresponding layer, and the PCC value would be low. (r>0.7 is better)
+
+```matlab
+start=10;final=40;
+lowset=[30,40,20,20];
+upset=[65,70,85,70];
+```
+
+We need to crop the slow scan image to fit the fast scan. Find the first and last layer (or 1/2, 1/3, at least two layer) corresponding to each scanning mode, then do the interpolation for interval layers.
+
+*note:*
+
+*It is better to crop slow scan and do the resize to fit fast scan, because the digital resolution of slow scan image is better than fast scan image.*
+
+3. Find the maximun value at the first and layer layer of fast scan, and you can correspond them to slow scan with physical distance, i.e. DOF.
+
+**Conclusion**
+
+After at least 5 times test, we find that the practical DOF value is quite similar to theoritical value (error < 10%).  
