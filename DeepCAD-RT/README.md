@@ -6,7 +6,7 @@ If your error shows related to "division by zero", which results from your compu
 
 For example,
 
-Your input data, each volume: 512*512*1500 (pixel)
+Your input data, each volume: 512x512x1500 (pixel)
 
 original:  (patch_x, patch_y, patch_t) = (512, 512, 100)
 
