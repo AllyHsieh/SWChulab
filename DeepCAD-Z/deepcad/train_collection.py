@@ -384,7 +384,7 @@ class training_class():
                 optimizer_G.zero_grad()
 
                 # Calculate total loss
-                Total_loss = 1 * L1_loss + 0 * L2_loss
+                Total_loss = 0.5 * L1_loss + 0.5 * L2_loss
                 Total_loss.backward()
                 optimizer_G.step()
                 # Record and estimate the remaining time
