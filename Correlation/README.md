@@ -14,7 +14,7 @@ As r = 1 indicates a perfect negative linear relationship, meaning that as one v
 
 As r = 0 indicates no linear relationship b etween the variables.
 
-<img src="img/PCC.jpg" alt="PCC" width="300" >
+<img src="img/PCC.jpg" alt="PCC" width="500" >
 
 We utilize the PCC for various image comparison tasks, for example, in image registration, PCC is used as a similarity metric to measure the alignment accuracy between two images. (As [3d motion correction](3d_motioncorrection)) 
 
