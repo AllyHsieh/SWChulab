@@ -12,7 +12,7 @@ where I is the average intensity of the signal in the image, bg represents the a
 
 Notably, we select different ROI to define signal and background region and do the average calcualtion:
 
-<img src="img/SNR.jpg" alt="PCC" width="500" >
+<img src="img/SNR.png" alt="PCC" width="500" >
 
 *reference:*
 
