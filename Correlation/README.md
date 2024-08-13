@@ -16,6 +16,6 @@ As r = 0 indicates no linear relationship b etween the variables.
 
 <img src="img/PCC.jpg" alt="PCC" width="500" >
 
-We utilize the PCC for various image comparison tasks, for example, in image registration, PCC is used as a similarity metric to measure the alignment accuracy between two images. (As [3d motion correction](3d_motioncorrection)) 
+We utilize the PCC for various image comparison tasks, for example, determining the DOF of the TAG lens by analyzing the correlation contour maps of low and high speed scanning images to find the best corresponding layer.
 
-Or determining the DOF of the TAG lens by analyzing the correlation contour maps of low and high speed scanning images to find the best corresponding layer.
+Or in image registration, PCC is used as a similarity metric to measure the alignment accuracy between two images. (As [3d motion correction](3d_motioncorrection)) 
