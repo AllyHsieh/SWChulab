@@ -1,6 +1,8 @@
 # SWChulab
 - [Reconstruction of high-speed volumetric images](reconstruction_fastscan_v9)
 
+If you want to test yourself about high-speed scanning, you can download this [quetionare](https://docs.google.com/document/d/1U5YJLygX7M1UBggWji-PXUCKYKXhNikdANlopbBka94/edit?usp=drive_link).
+
 - [Simulation of TAG lens extended DOF](SimulationDOF)
 
 - [TAG-SPARK (Previous name: DeepCAD-Z)](DeepCAD-Z)
