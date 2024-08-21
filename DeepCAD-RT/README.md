@@ -1,4 +1,5 @@
-**note**
+**note:**
+
 data size is the t dimension of the stack(xyt).
 
 **Error Debug**
