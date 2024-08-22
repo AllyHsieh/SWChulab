@@ -1,3 +1,5 @@
+<img src="img/pipeline.png" alt="Image pre-processing" width="500" >
+
 # regist_3D.m 
 Step 1: 輸入影像檔案
 
@@ -73,3 +75,4 @@ T = [1,0,0,0;0,1,0,0;0,0,1,0;x_loc(f),y_loc(f),z_loc(f),1];
 
 tform = affine3d(T);
 ```
+<img src="img/motioncorrection.jpg" alt="Motion correction before/after" width="300" >
