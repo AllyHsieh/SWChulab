@@ -63,3 +63,13 @@ transformPointsForward: 這個函數將這些輸入點按照仿射變換 tform �
 *note:*
 
 出圖時可以利用```medfilt1(x_loc,windowsize)```濾波器的方式, 設定windowsize的大小, 將曲線平均變得平滑, 看出整體的差異
+
+# apply_raw.m
+
+存下的```trace.mat```可以套用到不同的影像上, 利用重新製作轉換矩陣的方式, 套在不同的影像中
+
+```matlab
+T = [1,0,0,0;0,1,0,0;0,0,1,0;x_loc(f),y_loc(f),z_loc(f),1];
+
+tform = affine3d(T);
+```
