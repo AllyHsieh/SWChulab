@@ -58,6 +58,8 @@ switch FOV
 end
 ```
 
+<img src="img/yaxis.jpg" alt="Y axis calibration" width="500" >
+
 # 進入重建三維體積影像的階段
 
 **main.m**
@@ -83,6 +85,7 @@ x_pixel = 128; %重新組圖後的影像尺寸X
 y_pixel = 128; %重新組圖後的影像尺寸Y
 z_pixel = 265; %重新組圖後的影像尺寸Z
 ```
+<img src="img/sorting3d.png" alt="Sorting 3D" width="500" >
 
 **Time correction for voxel dependent**
 
@@ -96,6 +99,7 @@ xyzt_raw_data_timecorr = xyzt_raw_data; %如果不需要,可以直接更新名�
 disp('no timecorr')
 toc
 ```
+<img src="img/timecorr.jpg" alt="Voxel-depent time correction" width="500" >
 
 **Reslice in z direction into layer/micrometer unit**
 
