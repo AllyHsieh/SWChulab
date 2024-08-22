@@ -1,9 +1,10 @@
 clc;clear;close all
-[optimizer,metric] = imregconfig("multimodal");
 path = "D:\110011566\research_pan\3d_motioncorrection\xyz_denoise";
 suffix = "f_E_10_Iter_0785_output"; %依照.tif前面的後墜填入
 
 %%
+[optimizer,metric] = imregconfig("multimodal");
+
 save_path = path+"_registed";
 if ~isdir(save_path)
     mkdir(save_path)
@@ -24,7 +25,6 @@ z_loc = [0];
 parfor i = 3:length(dir("D:\110011566\research_pan\3d_motioncorrection\xyz_denoise"))-1
     movingVolume = tiffreadVolume(fullfile(path, "VOL_"+num2str(i)+suffix+".tif"));
     tform = imregtform(movingVolume,fixedVolume,"translation",optimizer,metric);
-
     centerOutput = affineOutputView(size(fixedVolume),tform,'BoundsStyle','centerOutput');
     movingRegisteredVolume = imwarp(movingVolume,tform,"bicubic",'OutputView',centerOutput);
     [temp_x,temp_y,temp_z] = transformPointsForward(tform, 0,0,0);
