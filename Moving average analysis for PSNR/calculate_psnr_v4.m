@@ -41,9 +41,7 @@ mean_psnr_mean = [];
 mean_corr_mean = [];
 denoise_psnr_mean = [];
 denoise_corr_mean = [];
-for downsample_factor = 60%5:100
-%     downsample_factor = 20;
-    %downsample ver
+for downsample_factor = 5:100
 
     raw_4d_10x = movmean(raw_4d,downsample_factor,4, "Endpoints","discard");
 
