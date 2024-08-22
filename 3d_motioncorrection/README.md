@@ -53,7 +53,7 @@ x_in 和 y_in: 這裡定義原本的輸入點座標
 
 transformPointsForward: 這個函數將這些輸入點按照仿射變換 tform 進行變換，返回變換後的點坐標
 
-原始點座標都設定在(0,0,0), 所以存下的新座標也就是移動的距離
+原始點座標都設定在(0,0,0), 所以存下的新座標, ```[temp_x,temp_y,temp_z]```, 也就是移動的距離
 
 ```matlab
 [temp_x,temp_y,temp_z] = transformPointsForward(tform, 0,0,0); 
